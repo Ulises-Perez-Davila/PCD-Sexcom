@@ -6,3 +6,7 @@ PONLE EL NOMBRE DE TU EQUIPO AQUI PARA QUE YO SEPA CUAL TEMA TE TOCO
 EQUIPO: Los cazadores de bandides
 
 TEMA: Ventas online
+
+Integrantes: 
+Perez Davila Ulices
+Fuentes Rosales Isis Jeanell
