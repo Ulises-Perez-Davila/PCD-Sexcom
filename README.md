@@ -12,8 +12,4 @@ Integrantes:
 
 2- Fuentes Rosales Isis Jeanell
 
-Observaciones Repositorio:
-1- No tiene la carpeta datos/
-2- Tiene una carpeta "Practica 1" que no sigue el nombre esperado "practica1" y no contiene las subcarpetas src/ y resultados/
-3- Faltan las carpetas practica2 a practica6
-4- No tiene la carpeta proyecto/
+📦 **Aviso:** ya está disponible su dataset en `datos/` — `ventas_online-ruido_100.csv` (para pruebas rápidas) y `ventas_online-ruido_100000.csv` (el dataset real para sus prácticas). ¡Ya pueden empezar!
