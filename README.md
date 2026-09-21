@@ -8,7 +8,7 @@ EQUIPO: Los cazadores de bandides
 TEMA: Ventas online
 
 Integrantes: 
-1- Perez Davila Ulices
+1- Perez Davila Ulises Alberto
 
 2- Fuentes Rosales Isis Jeanell
 
