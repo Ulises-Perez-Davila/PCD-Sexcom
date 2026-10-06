@@ -1,0 +1,34 @@
+=== RESUMEN DEL DATASET ===
+Archivo: ventas_online-ruido_100000.csv
+Pareja: Los cazadores de bandides
+Seed: 100000
+
+--- Dimensiones ---
+Filas: 103000
+Columnas: 9
+Nombres de columnas: minutos_en_sitio, comentario_cliente, producto, email, timestamp, monto_venta, telefono, direccion, id
+
+--- Primeras 5 filas ---
+minutos_en_sitio | comentario_cliente | producto | email | timestamp | monto_venta | telefono | direccion | id
+1.0 | Excelente producto, llego a tiempo y en buen estado | Tablet | jose.hernandez40@gmail.com | 2023-05-07 22:58:47 | 1004.05 | +52 80-6223-8242 | Calle Constitucion #331, Col. Vista Hermosa, CDMX | b1875289a3
+15.1 | Muy satisfecho con la compra, lo recomiendo ampliamente | camara | javier.jimenez65@live.com | 2024-10-09 20:58:44 | -1103.17 | 08-9134-2550 | Calle Madero #1722, Col. La Paz, Queretaro | 32b5b7b5de
+9.3 | Muy satisfecho con la compra, lo recomiendo ampliamente | Impresora | luis.flores20@live.com | 23-07-24 01:10:45 | 507.53 | 90-1468-0180 | Calle Constitucion #863, Col. Chapultepec, Leon | e3a986dd34
+ | Tardo mas de lo esperado en llegar el pedido | Audifonos | andreamorales45@yahoo.com | 2024-12-19 22:01:20 | 1375.07 | 07-1250-4945 | Calle Independencia #1931, Col. Jardines, Monterrey | 1c61f0b2cb
+11.6 | Excelente producto, llego a tiempo y en buen estado | Teclado | maria_hernandez27@outlook.com | 2024-09-19 10:50:36 | 7717.7 | 70-0854-3881 | Calle Hidalgo #1652, Col. Centro, CDMX | a8d9d733f4
+
+--- Columna categórica: producto ---
+
+--- Columna numérica: id ---
+
+--- Calidad de datos ---
+Celdas vacías totales: 32982
+Celdas vacías por columna:
+  minutos_en_sitio: 4128
+  comentario_cliente: 4105
+  producto: 4130
+  email: 4121
+  timestamp: 4116
+  monto_venta: 4134
+  telefono: 4131
+  direccion: 4117
+  id: 0
