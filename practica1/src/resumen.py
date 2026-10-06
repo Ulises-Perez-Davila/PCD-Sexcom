@@ -20,6 +20,7 @@ n_filas    = len(filas) - 3
 n_columnas = len(cabecera)
 primeras5  = filas[:5]
 
+#columnas categorica
 idx_cat = cabecera.index(CATEGORICA)
 conteo  = {}
 for fila in filas:

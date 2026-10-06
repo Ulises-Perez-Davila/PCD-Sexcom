@@ -2,10 +2,15 @@
 Archivo: ventas_online-ruido_100000.csv
 Pareja: Cazadores de bandides
 Seed: 1
+Archivo: ventas_online-ruido_100000.csv
+Pareja: Cazadores de bandides
+Seed: 1
 
 --- Dimensiones ---
 Filas: 102997
+Filas: 102997
 Columnas: 9
+Nombres de columnas: minutos_en_sitio, comentario_cliente, producto, email, timestamp, monto_venta, telefono, direccion, id
 Nombres de columnas: minutos_en_sitio, comentario_cliente, producto, email, timestamp, monto_venta, telefono, direccion, id
 
 --- Primeras 5 filas ---
@@ -19,15 +24,29 @@ minutos_en_sitio | comentario_cliente                                      | pro
 --- Columna categórica: producto ---
 Valores únicos: 24
 Valor más frecuente: Monitor (12033 apariciones)
+Valores únicos: 24
+Valor más frecuente: Monitor (12033 apariciones)
 
 --- Columna numérica: id ---
+Valores válidos (no vacíos): 1717
+Mínimo: 0.0
+Máximo: inf
 Valores válidos (no vacíos): 1717
 Mínimo: 0.0
 Máximo: inf
 
 --- Calidad de datos ---
 Celdas vacías totales: 32982
+Celdas vacías totales: 32982
 Celdas vacías por columna:
+  minutos_en_sitio: 4128
+  comentario_cliente: 4105
+  producto: 4130
+  email: 4121
+  timestamp: 4116
+  monto_venta: 4134
+  telefono: 4131
+  direccion: 4117
   minutos_en_sitio: 4128
   comentario_cliente: 4105
   producto: 4130
