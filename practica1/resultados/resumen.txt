@@ -1,34 +1,39 @@
 === RESUMEN DEL DATASET ===
-Archivo: ventas_online-ruido_100.csv
-Pareja: cazadores
-Seed: 100
+Archivo: ventas_online-ruido_100000.csv
+Pareja: Cazadores de bandides
+Seed: 1
 
 --- Dimensiones ---
-Filas: 103
+Filas: 102997
 Columnas: 9
-Nombres de columnas: direccion, timestamp, comentario_cliente, minutos_en_sitio, monto_venta, telefono, producto, id, email
+Nombres de columnas: minutos_en_sitio, comentario_cliente, producto, email, timestamp, monto_venta, telefono, direccion, id
 
 --- Primeras 5 filas ---
-direccion | timestamp | comentario_cliente | minutos_en_sitio | monto_venta | telefono | producto | id | email
-Calle Independencia #1672, Col. Las Aguilas, CDMX | 2023-08-03 03:50:25 | Excelente producto, llego a tiempo y en buen estado | 6.6 | 816.2 | 08-9394-3453 | monitor | 8dc442172a | carlosgarcia6@yahoo.com
-Calle Morelos #634, Col. Moderna, Puebla | 2023-01-15 11:45:59 | Excelente producto, llego a tiempo y en buen estado | 149.0 | 9467.68 | 38-5520-1909 | Mouse | 197ea99730 | juan_sanchez96@hotmail.com
-Calle Independencia #78, Col. Del Valle, CDMX | 2023-07-11 18:01:30 | Buena relacion calidad precio, volveria a comprar | 5.4 | 1008.05 | 89 8850 7485 | Teclado | 1deb82713d | ana.perez37@outlook.com
-Calle Revolucion #696, Col. Vista Hermosa, Monterrey | 2024-03-24 02:31:47 | Excelente producto, llego a tiempo y en buen estado | 8.2 | 833.56 | 73-6577-5708 | Camara | 18f5e000b1 | valentinarodriguez82@gmail.com
-Calle Allende #1848, Col. Vista Hermosa, CDMX | 2023-04-08 23:37:38 | Excelente producto, llego a tiempo y en buen estado | 4.9 | 7719.6 |  | Teclado | 4b07d178bb | valentina_garcia20@outlook.com
+minutos_en_sitio | comentario_cliente                                      | producto  | email                         | timestamp           | monto_venta | telefono         | direccion                                           | id        
+1.0              | Excelente producto, llego a tiempo y en buen estado     | Tablet    | jose.hernandez40@gmail.com    | 2023-05-07 22:58:47 | 1004.05     | +52 80-6223-8242 | Calle Constitucion #331, Col. Vista Hermosa, CDMX   | b1875289a3
+15.1             | Muy satisfecho con la compra, lo recomiendo ampliamente | camara    | javier.jimenez65@live.com     | 2024-10-09 20:58:44 | -1103.17    | 08-9134-2550     | Calle Madero #1722, Col. La Paz, Queretaro          | 32b5b7b5de
+9.3              | Muy satisfecho con la compra, lo recomiendo ampliamente | Impresora | luis.flores20@live.com        | 23-07-24 01:10:45   | 507.53      | 90-1468-0180     | Calle Constitucion #863, Col. Chapultepec, Leon     | e3a986dd34
+                 | Tardo mas de lo esperado en llegar el pedido            | Audifonos | andreamorales45@yahoo.com     | 2024-12-19 22:01:20 | 1375.07     | 07-1250-4945     | Calle Independencia #1931, Col. Jardines, Monterrey | 1c61f0b2cb
+11.6             | Excelente producto, llego a tiempo y en buen estado     | Teclado   | maria_hernandez27@outlook.com | 2024-09-19 10:50:36 | 7717.7      | 70-0854-3881     | Calle Hidalgo #1652, Col. Centro, CDMX              | a8d9d733f4
 
 --- Columna categórica: producto ---
+Valores únicos: 24
+Valor más frecuente: Monitor (12033 apariciones)
 
 --- Columna numérica: id ---
+Valores válidos (no vacíos): 1717
+Mínimo: 0.0
+Máximo: inf
 
 --- Calidad de datos ---
-Celdas vacías totales: 33
+Celdas vacías totales: 32982
 Celdas vacías por columna:
-  direccion: 4
-  timestamp: 4
-  comentario_cliente: 4
-  minutos_en_sitio: 4
-  monto_venta: 4
-  telefono: 5
-  producto: 4
+  minutos_en_sitio: 4128
+  comentario_cliente: 4105
+  producto: 4130
+  email: 4121
+  timestamp: 4116
+  monto_venta: 4134
+  telefono: 4131
+  direccion: 4117
   id: 0
-  email: 4
