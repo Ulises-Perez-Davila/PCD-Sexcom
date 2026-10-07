@@ -1,4 +1,7 @@
 # PCD-Sexcom
+
+> **SEMILLA: 1**
+
 Repositorio destinado para la asignatura de programación para ciencia de datos
 
 EQUIPO: Los cazadores de bandides
