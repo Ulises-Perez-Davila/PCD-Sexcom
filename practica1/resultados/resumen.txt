@@ -4,7 +4,7 @@ Pareja: Cazadores de bandides
 Seed: 1
 
 --- Dimensiones ---
-Filas: 102999
+Filas: 103000
 Columnas: 9
 Nombres de columnas: minutos_en_sitio, comentario_cliente, producto, email, timestamp, monto_venta, telefono, direccion, id
 
@@ -20,10 +20,10 @@ minutos_en_sitio | comentario_cliente                                      | pro
 Valores únicos: 24
 Valor más frecuente: Monitor (12033 apariciones)
 
---- Columna numérica: minutos_en_sitio ---
-Valores válidos (no vacíos): 98872
-Mínimo: -211.0
-Máximo: 3132.0
+--- Columna numérica: monto_venta ---
+Valores válidos (no vacíos): 98866
+Mínimo: -14634.3
+Máximo: 200325.6
 
 --- Calidad de datos ---
 Celdas vacías totales: 32982

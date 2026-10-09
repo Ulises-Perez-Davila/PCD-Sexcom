@@ -4,7 +4,7 @@ RUTA_SALIDA = "../resultados/resumen.txt"
 TEMA       = "ventas online"
 PAREJA     = "Cazadores de bandides"
 CATEGORICA = "producto"
-NUMERICA   = "minutos_en_sitio"
+NUMERICA   = "monto_venta"
 
 archivo_nombre = RUTA_CSV.split("/")[-1]  
 
@@ -16,7 +16,7 @@ with open(RUTA_CSV, "r", encoding="utf-8") as f:
 cabecera = [c.strip() for c in lineas[0].split("|")]
 filas    = [ln.split("|") for ln in lineas[1:]]
 
-n_filas    = len(filas) - 1
+n_filas    = len(filas) 
 n_columnas = len(cabecera)
 primeras5  = filas[:5]
 
