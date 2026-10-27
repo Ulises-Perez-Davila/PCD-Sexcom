@@ -30,6 +30,24 @@ Se observo que al no tener estandarizada la columna de categoria se obtuvieron m
 
 ## Observaciones del profesor
 
+### 13-oct-2026 — Correcciones de la Práctica 1
+
+**Calificación de P1: 83 → 90 / 100.**
+
+**Corrigieron sus dos observaciones** (commit del 9-oct):
+
+1. El conteo de filas ya es correcto: 103000. El bug era que quitaban la cabecera dos veces
+   (con `lineas[1:]` y otra vez con `len(filas) - 1`).
+2. La columna numérica ya es **`monto_venta`**: 98866 válidos, mínimo -14634.3 y máximo
+   200325.6.
+
+Los dos coinciden exacto con la solución de referencia.
+
+Un detalle menor que no afecta la calificación: en `Pareja:` sigue el nombre del equipo en
+vez de los nombres de los integrantes.
+
+**Cómo se aplicó el reconocimiento.** Nueve de los diez equipos que tenían observaciones las atendieron entre el 8 y el 12 de octubre. A quien corrigió y tenía 90 o más, su práctica queda en **99**; a quien tenía menos de 90, en **90**. El 100 se reserva para quien entregó bien desde la primera vez. En la tabla de calificaciones del curso su celda aparece como `anterior/vigente`: el primer número es la entrega original y **el segundo es el que cuenta**.
+
 ### Práctica 1 — evaluación (8-oct-2026, 00:51 h)
 
 **Calificación: 83 / 100**
