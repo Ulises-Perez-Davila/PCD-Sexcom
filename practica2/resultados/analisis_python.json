@@ -62,20 +62,35 @@
     "valor": "Monitor",
     "conteo": 12033
   },
-  "top_3_categorias": {},
+  "top_3_categorias": [
+    {
+      "valor": "Monitor",
+      "conteo": 12033
+    },
+    {
+      "valor": "Teclado",
+      "conteo": 11954
+    },
+    {
+      "valor": "Laptop",
+      "conteo": 11949
+    }
+  ],
   "estadisticas_numerica_1": {
     "columna": "monto_venta",
     "n_valores_validos": 98866,
     "minimo": -14634.3,
     "maximo": 200325.6,
-    "promedio": 1810.47
+    "promedio": 1810.47,
+    "mediana": 1037.17
   },
   "estadisticas_numerica_2": {
     "columna": "minutos_en_sitio",
     "n_valores_validos": 98872,
     "minimo": -211.0,
     "maximo": 3132.0,
-    "promedio": 21.16
+    "promedio": 21.16,
+    "mediana": 12.4
   },
   "promedio_por_categoria": {},
   "filtrado": {

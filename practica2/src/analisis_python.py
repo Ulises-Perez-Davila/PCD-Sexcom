@@ -81,19 +81,26 @@ def estadisticas(datos, columna):
             "n_valores_validos": 0,
             "minimo": None,
             "maximo": None,
-            "promedio": None
+            "promedio": None,
+            "mediana": None
         }
 
     ordenados = sorted(numeros)
     n = len(ordenados)
     mitad = n // 2
 
+    if n % 2 == 1:
+        mediana = ordenados[mitad]
+    else:
+        mediana = (ordenados[mitad - 1] + ordenados[mitad]) / 2
+
     return {
         "columna": columna,
         "n_valores_validos": n,
         "minimo": min(numeros),
         "maximo": max(numeros),
-        "promedio": round(sum(numeros) / n, 2)
+        "promedio": round(sum(numeros) / n, 2),
+        "mediana": round(mediana, 2)
     }
 
 
@@ -125,8 +132,6 @@ if montos:
     porcentaje = round(100 * len(caros) / len(montos), 2)
 else:
     porcentaje = 0.0
-
-
 
 #paso 5
 class Dataset:
@@ -162,6 +167,21 @@ class Dataset:
         valor = max(c, key=c.get)
         return valor, c[valor]
 
+    def top_3(self, columna):
+        #primero ordenar alfabeticamente
+        dicci = dict(sorted(self.conteo(columna).items(), key=lambda x: x[0]))
+        #ahora ordenar por aparicion
+        dicci = dict(sorted(dicci.items(), key=lambda x: x[1], reverse=True))
+        
+        final = []
+        for key, valor in dicci.items():
+            final.append({"valor": key, "conteo": valor})
+
+            # Tomar solo los primeros 3
+            if len(final) == 3:
+                break
+        return final
+
     def estadisticas(self, columna):
         return estadisticas(self.filas, columna)
 
@@ -170,7 +190,7 @@ class Dataset:
         return {col: sum(1 for fila in self.filas
                          if fila.get(col, "").strip() == "")
                 for col in self.columnas}
-
+   
     def filtrar(self, condicion):
         """Filas que cumplen una condicion. 'condicion' es una funcion
         que recibe una fila (dict) y devuelve True o False."""
@@ -203,7 +223,7 @@ resultado = {
     },
     "conteo_por_categoria": d.conteo("producto"),
     "categoria_mas_frecuente": {"valor": mas_frecuente, "conteo": veces},
-    "top_3_categorias": {},
+    "top_3_categorias": d.top_3("producto"),
     "estadisticas_numerica_1": d.estadisticas("monto_venta"),
     "estadisticas_numerica_2": d.estadisticas("minutos_en_sitio"),
     "promedio_por_categoria": {},
