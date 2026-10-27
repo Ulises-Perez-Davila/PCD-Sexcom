@@ -20,6 +20,10 @@ Practica 1:
 Se hizo un analisis breve y concreto de los datos proporcionados (ventas_online-ruido_100000.csv), usando manejo de archivos y las funciones sum(), min() y max(), dejando los resultados en
 un archivo con nombre 'resumen.txt'
 
+Practica 2:
+
+Se observo que al no tener estandarizada la columna de categoria se obtuvieron mas de una categoria con el mismo nombre pero escrita distinta, por esa razon cuando sacamos el promedio por categoria donde CAMARA y camara tienen distintos valores.
+
 📦 **Aviso:** ya está disponible su dataset en `datos/` — `ventas_online-ruido_100.csv` (para pruebas rápidas) y `ventas_online-ruido_100000.csv` (el dataset real para sus prácticas). ¡Ya pueden empezar!
 
 ---

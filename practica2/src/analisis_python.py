@@ -7,6 +7,7 @@ TEMA       = "ventas online"
 PAREJA     = "Cazadores de bandides"
 CATEGORICA = "producto"
 NUMERICA   = "monto_venta"
+NUMERICA_2 = "minutos_en_sitio"
 
 archivo_nombre = RUTA_CSV.split("/")[-1]  
 
@@ -47,7 +48,7 @@ def columna_numerica(datos, columna):
     return list(filter(lambda x: x is not None, convertidos))
 
 
-montos = columna_numerica(datos, "monto_venta")
+montos = columna_numerica(datos, NUMERICA)
 
 
 #paso 3
@@ -133,6 +134,45 @@ if montos:
 else:
     porcentaje = 0.0
 
+
+def promedio_por_categoria(datos, categorica, numerica):
+    '''
+    sacamos que categorias hay, despues verficamos por cada fila
+    si hay categoria o un numero en la columna numerica si estan
+    ambos entonces vamos sumando los numeros y contando cuantas
+    veces aparecen para al final poder sacar el promedio de cada
+    categoria
+    '''
+    categorias = valores_unicos(datos, categorica)
+    conteo = {}
+    prom_categ = {}
+
+    for fila in datos:
+        categoria = fila.get(categorica, "").strip()
+        crudo = fila.get(numerica, "").strip()
+
+        if categoria == "" or crudo == "":
+            continue
+
+        numero = a_float(crudo)
+
+        if numero is None:
+            continue
+
+        if categoria not in conteo:
+            conteo[categoria] = {"cantidad": 0, "suma": 0}
+
+        conteo[categoria]["cantidad"] += 1
+        conteo[categoria]["suma"] += numero
+
+    for categ in categorias:
+        if categ in conteo:
+            prom_categ[categ] = round(
+                conteo[categ]["suma"] / conteo[categ]["cantidad"], 2
+            )
+
+    return prom_categ
+
 #paso 5
 class Dataset:
     """Un dataset del curso, leido desde un CSV separado por '|'."""
@@ -190,7 +230,9 @@ class Dataset:
         return {col: sum(1 for fila in self.filas
                          if fila.get(col, "").strip() == "")
                 for col in self.columnas}
-   
+    def promedio_por_categoria(self, datos, categorica, numerica):
+        return promedio_por_categoria( datos, categorica, numerica)
+
     def filtrar(self, condicion):
         """Filas que cumplen una condicion. 'condicion' es una funcion
         que recibe una fila (dict) y devuelve True o False."""
@@ -210,10 +252,10 @@ d = Dataset(RUTA_CSV)
 #paso 6
 
 mas_frecuente, veces = d.mas_frecuente("producto")
-montos = d.numerica("monto_venta")
+montos = d.numerica(NUMERICA)
 
 resultado = {
-    "archivo": "ventas_online-ruido_100000.csv",
+    "archivo": archivo_nombre,
     "pareja": PAREJA,
     "seed": seed,
     "valores_unicos_categorica": {
@@ -224,9 +266,9 @@ resultado = {
     "conteo_por_categoria": d.conteo("producto"),
     "categoria_mas_frecuente": {"valor": mas_frecuente, "conteo": veces},
     "top_3_categorias": d.top_3("producto"),
-    "estadisticas_numerica_1": d.estadisticas("monto_venta"),
-    "estadisticas_numerica_2": d.estadisticas("minutos_en_sitio"),
-    "promedio_por_categoria": {},
+    "estadisticas_numerica_1": d.estadisticas(NUMERICA),
+    "estadisticas_numerica_2": d.estadisticas(NUMERICA_2),
+    "promedio_por_categoria": d.promedio_por_categoria(datos,"producto",NUMERICA),
     "filtrado": {
         "condicion": "monto_venta > " + str(umbral),
         "umbral_usado": umbral,
