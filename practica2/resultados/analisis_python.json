@@ -1,0 +1,87 @@
+{
+  "archivo": "ventas_online-ruido_100000.csv",
+  "pareja": "Cazadores de bandides",
+  "seed": 1,
+  "valores_unicos_categorica": {
+    "columna": "producto",
+    "n_valores_unicos": 24,
+    "valores": [
+      "AUDIFONOS",
+      "Audifonos",
+      "CAMARA",
+      "Camara",
+      "IMPRESORA",
+      "Impresora",
+      "LAPTOP",
+      "Laptop",
+      "MONITOR",
+      "MOUSE",
+      "Monitor",
+      "Mouse",
+      "TABLET",
+      "TECLADO",
+      "Tablet",
+      "Teclado",
+      "audifonos",
+      "camara",
+      "impresora",
+      "laptop",
+      "monitor",
+      "mouse",
+      "tablet",
+      "teclado"
+    ]
+  },
+  "conteo_por_categoria": {
+    "Tablet": 11923,
+    "camara": 212,
+    "Impresora": 11713,
+    "Audifonos": 11719,
+    "Teclado": 11954,
+    "Monitor": 12033,
+    "Mouse": 11870,
+    "Camara": 11840,
+    "Laptop": 11949,
+    "tablet": 237,
+    "MOUSE": 246,
+    "CAMARA": 251,
+    "MONITOR": 224,
+    "monitor": 253,
+    "teclado": 246,
+    "LAPTOP": 213,
+    "mouse": 227,
+    "TABLET": 255,
+    "TECLADO": 271,
+    "impresora": 246,
+    "laptop": 251,
+    "IMPRESORA": 239,
+    "audifonos": 252,
+    "AUDIFONOS": 246
+  },
+  "categoria_mas_frecuente": {
+    "valor": "Monitor",
+    "conteo": 12033
+  },
+  "top_3_categorias": {},
+  "estadisticas_numerica_1": {
+    "columna": "monto_venta",
+    "n_valores_validos": 98866,
+    "minimo": -14634.3,
+    "maximo": 200325.6,
+    "promedio": 1810.47
+  },
+  "estadisticas_numerica_2": {
+    "columna": "minutos_en_sitio",
+    "n_valores_validos": 98872,
+    "minimo": -211.0,
+    "maximo": 3132.0,
+    "promedio": 21.16
+  },
+  "promedio_por_categoria": {},
+  "filtrado": {
+    "condicion": "monto_venta > 1468.54",
+    "umbral_usado": 1468.54,
+    "n_registros_que_cumplen": 9886,
+    "porcentaje": 10.0
+  }
+}
