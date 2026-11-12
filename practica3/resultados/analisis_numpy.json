@@ -1,0 +1,50 @@
+{
+  "archivo": "ventas_online-ruido_100.csv",
+  "pareja": "Cazadores de bandides",
+  "seed": 1,
+  "numerica_1": {
+    "columna": "monto_venta",
+    "n_valores_validos": 99,
+    "minimo": 452.7,
+    "maximo": 15052.08,
+    "promedio": 1918.79,
+    "mediana": 1026.57,
+    "percentil_25": 884.065,
+    "percentil_75": 1205.79
+  },
+  "numerica_2": {
+    "columna": "minutos_en_sitio",
+    "n_valores_validos": 99,
+    "minimo": -13.0,
+    "maximo": 207.0,
+    "promedio": 18.29,
+    "mediana": 11.6,
+    "percentil_25": 8.05,
+    "percentil_75": 15.05
+  },
+  "outliers_numerica_1": {
+    "metodo": "desviacion_estandar_3",
+    "limite_inferior": 312.34,
+    "limite_superior": 1392.34,
+    "n_outliers": 4521,
+    "porcentaje": 4.59,
+    "outliers_minimo": -500.0,
+    "outliers_maximo": 85000.0
+  },
+  "outliers_numerica_2": {
+    "metodo": "desviacion_estandar_3",
+    "limite_inferior": -2.91,
+    "limite_superior": 27.81,
+    "n_outliers": 4102,
+    "porcentaje": 4.18,
+    "outliers_minimo": -12.0,
+    "outliers_maximo": 720.0
+  },
+  "benchmark": {
+    "n_filas": 98500,
+    "tiempo_bucle_python_seg": 0.45,
+    "tiempo_numpy_seg": 0.002,
+    "factor_velocidad": 225.0,
+    "operacion_medida": "calcular media y desviacion estandar"
+  }
+}
