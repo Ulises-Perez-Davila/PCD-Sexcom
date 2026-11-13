@@ -1,5 +1,6 @@
 import numpy as np
 import json
+import time
 
 RUTA_CSV    = "../../datos/ventas_online-ruido_100.csv"
 RUTA_SALIDA = "../resultados/analisis_numpy.json"
@@ -131,6 +132,60 @@ def estadisticas(columna, arr_np):
         "percentil_75": per_75
     }
 #paso 6
+
+def outliers(arreglo, n_filas):
+
+    if int(n_filas) <= 0 or len(arreglo) <= 0:
+        return {
+            "metodo": "desviacion_estandar_3",
+            "limite_inferior": None,
+            "limite_superior": None,
+            "n_outliers": 0,
+            "porcentaje": None,
+            "outliers_minimo": None,
+            "outliers_maximo": None
+        }
+
+    media = arreglo.mean()
+    std = arreglo.std()
+    k=3
+
+    inferior = media - k * std
+    superior = media + k * std
+    marcados = arreglo[(arreglo < inferior) | (arreglo > superior)]
+
+    minimo= np.nanmin(marcados)
+    maximo= np.nanmax(marcados)
+    n= len(marcados)
+
+    return {
+        "metodo": "desviacion_estandar_3",
+        "limite_inferior": inferior,
+        "limite_superior": superior,
+        "n_outliers": n,
+        "porcentaje": (n/n_filas)*100,
+        "outliers_minimo": minimo,
+        "outliers_maximo": maximo
+    }
+
+def tiempos(arreglo):
+    # --- Bucle de Python puro ---
+    inicio = time.perf_counter()
+    total_py = 0.0
+    for v in arreglo:
+        total_py += v * v
+    t_py = time.perf_counter() - inicio
+
+    # --- NumPy, vectorizado ---
+    inicio = time.perf_counter()
+    total_np = float((arreglo ** 2).sum())
+    t_np = time.perf_counter() - inicio
+
+    print("bucle:", round(total_py, 2), "en", round(t_py, 6), "s")
+    print("numpy:", round(total_np, 2), "en", round(t_np, 6), "s")
+    print()
+    print("calculan lo mismo?", np.allclose(total_py, total_np))
+    print("factor de velocidad:", round(t_py / t_np, 1), "x")
 '''
 pesos_por_minuto = X[:, 0] / X[:, 1]
 
@@ -223,9 +278,9 @@ class Dataset:
 
     def estadisticas(self, columna, validos):
         return estadisticas( columna, validos)
-    '''
+    
     def outliers(self, columna):
-        return outliers(self.filas, columna)'''
+        return outliers(columna, self.__len__())
     
     # --- metodos especiales ---
     def __len__(self):
@@ -250,25 +305,9 @@ resultado = {
 
   "numerica_2": d.estadisticas(NUMERICA_2,n2),
 
-  "outliers_numerica_1": {
-    "metodo": "desviacion_estandar_3",
-    "limite_inferior": 312.34,
-    "limite_superior": 1392.34,
-    "n_outliers": 4521,
-    "porcentaje": 4.59,
-    "outliers_minimo": -500.0,
-    "outliers_maximo": 85000.0
-  },
+  "outliers_numerica_1": d.outliers(n1),
 
-  "outliers_numerica_2": {
-    "metodo": "desviacion_estandar_3",
-    "limite_inferior": -2.91,
-    "limite_superior": 27.81,
-    "n_outliers": 4102,
-    "porcentaje": 4.18,
-    "outliers_minimo": -12.0,
-    "outliers_maximo": 720.0
-  },
+  "outliers_numerica_2": d.outliers(n2),
 
   "benchmark": {
     "n_filas": 98500,

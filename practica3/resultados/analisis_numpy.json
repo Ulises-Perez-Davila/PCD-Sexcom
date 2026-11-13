@@ -24,21 +24,21 @@
   },
   "outliers_numerica_1": {
     "metodo": "desviacion_estandar_3",
-    "limite_inferior": 312.34,
-    "limite_superior": 1392.34,
-    "n_outliers": 4521,
-    "porcentaje": 4.59,
-    "outliers_minimo": -500.0,
-    "outliers_maximo": 85000.0
+    "limite_inferior": -6678.567830523592,
+    "limite_superior": 10516.141365877127,
+    "n_outliers": 5,
+    "porcentaje": 4.854368932038835,
+    "outliers_minimo": 10536.6,
+    "outliers_maximo": 15052.08
   },
   "outliers_numerica_2": {
     "metodo": "desviacion_estandar_3",
-    "limite_inferior": -2.91,
-    "limite_superior": 27.81,
-    "n_outliers": 4102,
-    "porcentaje": 4.18,
-    "outliers_minimo": -12.0,
-    "outliers_maximo": 720.0
+    "limite_inferior": -76.17135210028738,
+    "limite_superior": 112.75721068614598,
+    "n_outliers": 4,
+    "porcentaje": 3.8834951456310676,
+    "outliers_minimo": 126.0,
+    "outliers_maximo": 207.0
   },
   "benchmark": {
     "n_filas": 98500,
