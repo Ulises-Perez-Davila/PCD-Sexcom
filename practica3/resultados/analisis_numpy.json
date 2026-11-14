@@ -1,50 +1,52 @@
 {
-  "archivo": "ventas_online-ruido_100.csv",
+  "archivo": "ventas_online-ruido_100000.csv",
   "pareja": "Cazadores de bandides",
   "seed": 1,
   "numerica_1": {
     "columna": "monto_venta",
-    "n_valores_validos": 99,
-    "minimo": 452.7,
-    "maximo": 15052.08,
-    "promedio": 1918.79,
-    "mediana": 1026.57,
-    "percentil_25": 884.065,
-    "percentil_75": 1205.79
+    "n_valores_validos": 98866,
+    "media": 1810.47,
+    "desviacion_estandar": 4909.61,
+    "minimo": -14634.3,
+    "maximo": 200325.6,
+    "mediana": 1037.17,
+    "percentil_25": 865.41,
+    "percentil_75": 1222.86
   },
   "numerica_2": {
     "columna": "minutos_en_sitio",
-    "n_valores_validos": 99,
-    "minimo": -13.0,
-    "maximo": 207.0,
-    "promedio": 18.29,
-    "mediana": 11.6,
-    "percentil_25": 8.05,
-    "percentil_75": 15.05
+    "n_valores_validos": 98872,
+    "media": 21.16,
+    "desviacion_estandar": 58.94,
+    "minimo": -211.0,
+    "maximo": 3132.0,
+    "mediana": 12.4,
+    "percentil_25": 8.7,
+    "percentil_75": 16.3
   },
   "outliers_numerica_1": {
     "metodo": "desviacion_estandar_3",
-    "limite_inferior": -6678.567830523592,
-    "limite_superior": 10516.141365877127,
-    "n_outliers": 5,
-    "porcentaje": 4.854368932038835,
-    "outliers_minimo": 10536.6,
-    "outliers_maximo": 15052.08
+    "limite_inferior": -12918.37,
+    "limite_superior": 16539.31,
+    "n_outliers": 264,
+    "porcentaje": 0.27,
+    "outliers_minimo": -14634.3,
+    "outliers_maximo": 200325.6
   },
   "outliers_numerica_2": {
     "metodo": "desviacion_estandar_3",
-    "limite_inferior": -76.17135210028738,
-    "limite_superior": 112.75721068614598,
-    "n_outliers": 4,
-    "porcentaje": 3.8834951456310676,
-    "outliers_minimo": 126.0,
-    "outliers_maximo": 207.0
+    "limite_inferior": -155.66,
+    "limite_superior": 197.99,
+    "n_outliers": 688,
+    "porcentaje": 0.7,
+    "outliers_minimo": -211.0,
+    "outliers_maximo": 3132.0
   },
   "benchmark": {
-    "n_filas": 98500,
-    "tiempo_bucle_python_seg": 0.45,
-    "tiempo_numpy_seg": 0.002,
-    "factor_velocidad": 225.0,
+    "n_filas": 98866,
+    "tiempo_bucle_python_seg": 0.068868,
+    "tiempo_numpy_seg": 0.0013408,
+    "factor_velocidad": 51.36,
     "operacion_medida": "calcular media y desviacion estandar"
   }
 }
