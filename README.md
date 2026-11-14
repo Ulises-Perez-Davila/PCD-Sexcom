@@ -30,6 +30,34 @@ Se observo que al no tener estandarizada la columna de categoria se obtuvieron m
 
 ## Observaciones del profesor
 
+### Práctica 2 — evaluación (27-oct-2026)
+
+**Calificación: 100 / 100**
+
+Entregada el **26-oct-2026 a las 18:40**, dentro del plazo (la entrega cerraba el lun 26-oct), así que no lleva penalización por retraso.
+
+**Práctica correcta.** Los doce criterios salieron completos: el JSON coincide campo por campo con la solución de referencia de su tema y su semilla —conteos exactos y promedios dentro de tolerancia— y el código cumple todos los requisitos. Nada que corregir.
+
+**Lo que destaca:** **21 funciones, 9 `lambda` y la clase `Dataset` opcional**, además de una función `percentil()` propia. Trabajaron con una rama por integrante (`isis`, `ulises`), las dos integradas a `main`. Vienen de 83 en P1.
+
+**Desglose:**
+
+| Criterio | Obtenido | Máximo |
+|---|:---:|:---:|
+| Nombres exactos de los entregables | 10 | 10 |
+| Requisitos de Git (3+ commits, rama integrada) | 8 | 8 |
+| Requisitos de código (5 funciones, `lambda`, `map`/`filter`) | 12 | 12 |
+| Encabezado del JSON: archivo, pareja, seed | 6 | 6 |
+| `valores_unicos_categorica` | 10 | 10 |
+| `conteo_por_categoria` | 10 | 10 |
+| `categoria_mas_frecuente` | 6 | 6 |
+| `top_3_categorias` | 8 | 8 |
+| `estadisticas_numerica_1` (con mediana) | 12 | 12 |
+| `estadisticas_numerica_2` (con mediana) | 8 | 8 |
+| `promedio_por_categoria` | 6 | 6 |
+| `filtrado` (percentil 90) | 4 | 4 |
+| **Total** | **100** | **100** |
+
 ### 13-oct-2026 — Correcciones de la Práctica 1
 
 **Calificación de P1: 83 → 90 / 100.**
@@ -77,7 +105,8 @@ Entregada el **6-oct-2026 a las 17:34**, dentro del plazo (la entrega cerraba el
 | Columna numérica_1 (nombre, válidos, mín, máx) | 0 | 13 |
 | Calidad de datos (celdas vacías) | 5 | 5 |
 | **Total** | **83** | **100** |
-### 22-sep-2026
+
+### 26-sep-2026
 
 **Estatus:** 6/6 de la estructura esperada.
 
@@ -91,7 +120,7 @@ Siguen con la estructura completa, sin pendientes.
 
 📖 **Práctica 1 ya está disponible.** La encontrarán en `labs/P1/P1_setup_reconocimiento.md`, dentro del repositorio del profesor: https://github.com/ESCOMLCD/pcd202701/blob/main/labs/P1/P1_setup_reconocimiento.md — léanla completa antes de empezar a programar, ahí está todo lo que deben hacer, el formato exacto de `resumen.txt` y la fecha de entrega (mar 6-oct).
 
-### 26-sep-2026
+### 22-sep-2026
 
 **Estatus:** 6/6 de la estructura esperada.
 
