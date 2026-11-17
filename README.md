@@ -30,6 +30,30 @@ Se observo que al no tener estandarizada la columna de categoria se obtuvieron m
 
 ## Observaciones del profesor
 
+### Práctica 3 — evaluación (16-nov-2026)
+
+**Calificación: 100 / 100**
+
+Entregada el **13-nov-2026 a las 21:08**, dentro del plazo (la entrega cerraba el vie 13-nov), así que no lleva penalización por retraso.
+
+**Práctica correcta.** Los 9 criterios salieron completos: el resultado coincide campo por campo con la solución de referencia de su tema y su semilla —conteos exactos y valores numéricos dentro de tolerancia— y el código cumple todos los requisitos. Nada que corregir.
+
+**Lo que destaca:** La entrega más elaborada en diseño: una clase `Dataset` con `__len__` y `__str__` implementados, 14 funciones y una `lambda`. Implementar los métodos especiales no se pedía; es trabajo de más y bien hecho.
+
+**Desglose:**
+
+| Criterio | Obtenido | Máximo |
+|---|:---:|:---:|
+| Nombres exactos de los entregables | 8 | 8 |
+| Requisitos de Git (3+ commits, rama integrada) | 8 | 8 |
+| Requisitos de código (NumPy, sin pandas) | 12 | 12 |
+| Encabezado del JSON: archivo, pareja, seed | 6 | 6 |
+| `numerica_1` (8 estadísticos) | 20 | 20 |
+| `numerica_2` (8 estadísticos) | 16 | 16 |
+| `outliers_numerica_1` (±3 desviaciones) | 12 | 12 |
+| `outliers_numerica_2` (±3 desviaciones) | 10 | 10 |
+| `benchmark` (NumPy vs bucle puro) | 8 | 8 |
+| **Total** | **100** | **100** |
 ### Práctica 2 — evaluación (27-oct-2026)
 
 **Calificación: 100 / 100**
